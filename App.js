@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LandingScreen from "./components/auth/Landing";
+import RegisterScreen from "./components/auth/Register";
 import * as firebase from "firebase";
 const Stack = createStackNavigator();
 
@@ -29,6 +30,8 @@ export default function App() {
         <Stack.Navigator initialRouteName="Landing">
             <Stack.Screen name='Landing' component={LandingScreen}
                           options={{headerShown:false}} />
+            <Stack.Screen name='RegisterScreen' component={RegisterScreen}
+                          />
         </Stack.Navigator>
       </NavigationContainer>
   );
